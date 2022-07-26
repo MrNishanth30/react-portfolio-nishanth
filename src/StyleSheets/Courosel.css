@@ -1,0 +1,64 @@
+.parent-courosel {
+  background-color: #001220;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-gallery {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: image-gallery 20s linear infinite;
+}
+
+.image-gallery:hover {
+  animation-play-state: paused;
+}
+
+.image-gallery:hover svg {
+  opacity: 0.2;
+}
+
+.image-gallery span {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+  transform-origin: center;
+  transition: all 1s;
+  transform: rotateY(calc(var(--i) * 72deg)) translateZ(215px);
+}
+
+.image-gallery span svg {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  transition: all 1s;
+  -webkit-box-reflect: below 1px
+    linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.164));
+}
+
+.image-gallery span svg:hover {
+  cursor: pointer;
+  opacity: 1;
+  transition: all 1s;
+  transform: scale(1.2);
+}
+
+@keyframes image-gallery {
+  0% {
+    transform: perspective(1000px) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(1000px) rotateY(360deg);
+  }
+}

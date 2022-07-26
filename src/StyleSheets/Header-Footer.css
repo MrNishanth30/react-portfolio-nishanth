@@ -1,0 +1,153 @@
+.menu-icon {
+  color: orangered;
+  font-size: 70px;
+  margin: 20px;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.show-Header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #001220;
+  opacity: 0.98;
+  height: 65vh;
+  width: 50%;
+  border-bottom-left-radius: 50%;
+  transition: all 0.5s;
+  z-index: 2;
+}
+
+.hide-Header {
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 0;
+  width: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+ul li {
+  color: white;
+  list-style: none;
+  margin-top: 25px;
+}
+
+ul a {
+  color: white;
+  text-decoration: none;
+}
+
+.active {
+  border: 3px solid cyan;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.active a {
+  color: cyan;
+  font-weight: bold;
+}
+
+@media (max-width: 750px) {
+  .show-Header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #001220;
+    opacity: 0.98;
+    height: 100vh;
+    width: 100%;
+    transition: width 0.5s;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    border-left: 2px solid rgba(255, 255, 255, 0.457);
+    z-index: 2;
+  }
+
+  .hide-Header {
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    height: 0;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s;
+  }
+
+  .menu-icon {
+    color: orangered;
+    font-size: 45px;
+    margin: 20px;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  .contact {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .form-contact {
+    padding: 35px !important;
+  }
+}
+
+.contact img {
+  height: 50vh;
+  width: 100%;
+}
+
+input,
+textarea {
+  margin-top: 25px;
+  border: none !important;
+  background-color: #ebecf0 !important;
+  background: #ebecf0;
+  box-shadow: 5px 5px 10px #88898b, -5px -5px 10px #ffffff !important;
+  border-radius: 20px !important;
+}
+
+.form-control:focus {
+  transform: scale(1.02);
+}
+
+.form-contact button {
+  background-color: rgba(0, 0, 255, 0.872);
+  font-weight: bold;
+  color: white;
+}
+
+.form-contact {
+  padding: 35px !important;
+}
+
+.footer-content {
+  background-color: #001220;
+  text-align: center;
+  color: white;
+}
+
+.footer-content svg:hover {
+  color:cyan;
+  transform: scale(1.5);
+  cursor: pointer;
+}
